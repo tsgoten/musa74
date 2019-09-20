@@ -1,0 +1,58 @@
+\documentclass[10pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amsthm, chngcntr}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\theoremstyle{definition} 
+\newtheorem{q}{}
+\renewcommand*{\theq}{\alph{q}}
+\counterwithin*{q}{section}
+\begin{document}
+	
+\makechaptertitle{MUSA 74 Homework 2}
+
+\begin{q}
+	Homework 1.35 \\
+	I will not take this offer. After the 60 minutes has passed the Devil will have all the bills, and I will be left with none. This is simply because the set of his bills are $ \textbf{N} $ and therefor where all bills are labeled by $ n \in \textbf{N} $, I will be left with no more bills.
+\end{q}
+\begin{q}
+	Homework 1.36 \\
+	Proof. If an $ x \in A \cap B $, then it follows that $ f(x) \in A \cap B $ since $ A \cap B \subseteq X$. Therefore $ f(x) \in A $ and $ f(x) \in B $ for all $ x $. So by definition the claim follows. \\
+	Similarly, for a $ x \in A \cup B $, $ f(x) \in B $ since $ A \cup B \subseteq X $. So it follows that for all $ f(x) $ is in $ A $ or $ B $, and the claim follows. \\
+	We can show a counterexample for disproving $ f(A\cap B) = f(A) \cap f(B) $. We have already shown that $ f(A \cap B) \subseteq f(A) \cap f(B) $, so we must show that it is not the case that $ f(A) \cap f(B) \subseteq f(A \cap B) $. Consider the transformation $ f: Z \rightarrow Z^+ $. Where $ Z $ is the integers and $ Z^+ $ are all the positive integers. The transformation is as follows $ f(x) = x^2 $. If $ A $ is all the positives and $ B $ is all the negatives. $ f(A) \cap f(B) $ is all the squares $ {1, 4, 9, 16, ...} $. But $ f(A cap B) $ is the empty set since the intersection of the positives and negatives is the empty set. It is therefore false that the squares is a subset of the empty set.
+\end{q}
+\begin{q}
+	Homework 1.37 \\
+	$ \mathcal{P}(X) $ has the cardinality of $ 2^n $ if the cardinality of $ X $ is $ n $. This is because each element of $ X $ has two options, to be either in or not in of any arbitrary subset of $ X $. Since there are $ 2 $ options over $ n $ elements it leads to $ 2^n $. For a similar reason the cardinality of $ B(X) $ is also $ 2^x $, because the "choice" of an element being inside or outside of an arbitrary set can be represented by a $ {0, 1} $.
+\end{q}
+\begin{q}
+	Homework 5.7 \\
+	Firstly, $ \forall n \in N $, $ n < \forall a \in \omega $. And by definition of naturals $ n_{k+1} = n_k + 1 $, all naturals are successors. So, if there does exist a limit it must not be in $ N $. By definition of $ 2 \omega $ $ \omega_{k+1} = \omega_k + 1 $, all of them are successors and there exists no limit.
+\end{q}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
