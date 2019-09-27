@@ -1,0 +1,67 @@
+\documentclass[10pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amsthm, chngcntr}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\theoremstyle{definition} 
+\newtheorem{q}{}
+\renewcommand*{\theq}{\alph{q}}
+\counterwithin*{q}{section}
+\begin{document}
+	
+\makechaptertitle{MUSA 74 Homework 3}
+
+\begin{q}
+	Homework 1.49 \\
+	Proof. Proceed by contradiction, so assume there does exist a universe $ U $ such that
+	\[ U = \{X : X \text{ is a set} \} \]
+	Construct a set $ A $ such that
+	$ A = \{ x \vline x \in x \} $
+	then if $ A \in A$ by the construction of the set must mean that $ A \not \in A $. This is a contradiction, and thus no such universe exists.
+\end{q}
+\begin{q}
+	Homework 1.50
+	\begin{enumerate}
+		\item If $ n $ is even, we can represent it as $ n = m^3 = 2k $ for any $ k \in Z $. Since, $ m^3 $ has the exact same prime factors as $ m $ we can say that if 2 divides $ m^3 $, then 2 divides $ m $. So, $ m = 2j $. So, $ n = m^3 = (2j)^3 = 8 j^3$. Therefore, $ n $ is divisible by 8.
+		\item Assume that $ n $ is odd and it is divisible by $ 512 = 8^3 $. Then, $ n = m^3 = q 512 $ for some $ q \in Z $. That must mean that $ \left(\dfrac{m}{8}\right)^3 = q $. We simply choose a counter example for which the does not hold. $ m = 3 \implies m^3 = 27 $. Where $ \frac{27}{8} $ is not an integer and we have a contradiction.
+	\end{enumerate}
+\end{q}
+\begin{q}
+	Homework 1.52 \\
+	For any arbitrary $ n $ when divided by $ p $ we have $ \frac{n}{p} = \frac{x}{p} + r $. We know that $ 0 \leq r < p $. Since, we are dealing with naturals so there cannot be negative values. If $ r \geq p $ then we could still divide it and be left with a new remainder. Since, $ p < n $ then we can use the Pigeonhole Principle on $ 0 \leq r < p $ different remainders and and since $ r < p < n $ then there must exist two $ n $ with the same remainder.
+\end{q}
+\begin{q}
+	Homework 5.53 \\ 
+	Assume that there is no uncomputable number. Since, computer programs can be represented by bits then every computer program must be a number which must be computable. Then the set of all computer programs is computable. Consider the computer programs that return real numbers when called. Since all programs are computable and some $ n $ maps for them that must mean that there $ N $ is the same cardinality as $ R $. This is a contradiction by Cantor's Theorem. 
+\end{q}
+\begin{q}
+	Homework 5.54 \\
+	For some $ q \in Q $ it is computable since some program can perform the operation on the expression $ \frac{m}{n} = q $, where simply dividing $ m $ by $ n $ and returning the $ nth $ digit is a computable program.
+\end{q}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
