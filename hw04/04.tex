@@ -1,6 +1,6 @@
 \documentclass[10pt, twocolumn]{article}
 \author{Tarang Srivastava}
-\usepackage{amsmath, amssymb, amsthm, chngcntr}
+\usepackage{amsmath, amssymb, amsthm, xcolor,  chngcntr}
 \usepackage{graphicx}
 \usepackage[margin=.25in]{geometry}
 \setlength{\columnsep}{.5in}
@@ -64,8 +64,33 @@ We will show the statement holds for $ k + 1 $. That is,
 $$ 1^2 + 2^2 + ... + (k+1)^2 = \dfrac{(k+1)(k+2)(2k+3)}{6} $$
 From our inductive hypothesis we can substitute in 
 $$  \dfrac{k(k+1)(2k+1)}{6} + (k+1)^2 = \dfrac{(k+1)(k+2)(2k+3)}{6} $$
-Which with some algebra is equivalent.
+Which with some algebraic manipulations we can show are equivalent.
+\end{q}
+\begin{q}
+Homework 5.8 \\
+Proof. Suppose for contradiction there exists a $ \phi \in \alpha $ such that $ P(\phi) $ is false. 
+The first case is that $ \phi = 0 $ in which case the statement does not hold.
+The second case is that if $ P(k+1) $ is false, then $ P(k) $ is false. This does not hold for $ \phi = 1 $
+and by strong induction for all $ \gamma $ less than the limit.
+Lastly, if $ \phi $ is a limit, then by the second condition it is also true. 
+Therefore, no such $ phi $ exists and thats and the statement if false.
+Thus, the original statement is proved by contradiction.
+\end{q}
+\begin{q}
+	Homework 5.10 \\	
+	Proof. For the Zero stage $ \beth_b = | \mathbb{N} | $,
+	in which case $ \beth_a = | \mathcal P(\mathbb{N}) | $. 
+	It is known that $ | \mathbb{N} | <  | \mathcal P(\mathbb{N}) |$, in which case the statement holds.
+	For the successor stages we will proceed by Cantor's diagonal argument.
+	Assume that $ \beth_a = \beth_b $.
+	Then there exists a bijection between the two ordinals. 
+	We can now construct a subset $ \phi $, that is not in the bijectiion by ordering all the subsets. 
+	We simply look at the first value, if it is not in the first set we add it ot $ \phi $ otherwise if it is in the first subset we do not add it to $ \phi $. 
+	By this construction we arrive at a subset that is not in the bijection, and therefore the cardinality is greater. 
+	Thus, the statement holds for the successor stages.
+	For the Limit stage. \\ 
 
+	~~~~I couldn't prove this part, and to be honest did not completely understand the defintion for the limit case of ordinals ~~~~
 \end{q}
 
 \end{document}
