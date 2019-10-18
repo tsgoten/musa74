@@ -1,0 +1,71 @@
+\documentclass[10pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amssymb, amsthm, chngcntr}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\theoremstyle{definition} 
+\newtheorem{q}{}
+\renewcommand*{\theq}{\alph{q}}
+\counterwithin*{q}{section}
+\begin{document}
+	
+\makechaptertitle{MUSA 74 Homework 3}
+
+\begin{q}
+Homework 1.67 \\
+Proof. Proceed by induction on $ n $. For the base case consider when $ n = 1 $. That is, $ p|a_1 $
+The base case is trvially true, and the statement holds.
+Assume the statement holds for some $ k \in \mathbb{N} $.
+That is, if $ p|a_i...a_k $, then there is some $ i \in \{1, ..., k\} $ such that $ p|a_i $.
+In the inductive step, we need to show the statement holds for $ k + 1 $.
+That is, if $ p|a_i...a_{k+1} $, then there is some $ i \in \{1, ..., k+1\} $ such that $ p|a_i $.
+We will prove the inductive step by cases.
+The first case is when $ i $ is in some set $ \{1, ..., k\} $.
+From our inductive hypothesis we know there exists an $ i \in \{1, ..., k\} $ 
+such that $ p|a_i $. 
+The second case is when $ i $ is not in some set $ \{1, ..., k\} $.
+Therefore, for all $ i \in \{1, ..., k\} $, $ p \not | a_i $. 
+Which is equivalent to the $ \text{gcd}(p, a_i) = 1 $ for all $ i \in \{1, ..., k\} $, 
+but since $ p|a_i...a_{k+1} $, and the gcd for $ p $ and $ a_i...a_{k+1} $ is $ p $. 
+There must exist an $ a_i $ for $ i \in \{1,...,k+1\} $ such that gcd for $ p $ and $ a_i $ is $ p $ and therefore $ p|a_i $. 
+Thus, having shown the inductive step the statement holds for all $ n $.
+\end{q}
+\begin{q}
+Homework 1.68 \\
+Proof. Since we are concerned about a Cartesian product an arbitrary $ n $ times we can proceed by induction on $ n $. 
+For the base case of $ n = 0 $, $ \mathbb{N} $ is trivially countable.
+Assume that for some Cartesian product $ k \in \mathbb{N} $ times, the product is countable.
+We will show that the Cartesian product for $ k + 1 $ times is also countable. 
+Let $ g: X_1 \times X_2 \times ... \times X_k \rightarrow \mathbb{X} $ from the inductive hypothesis.
+Then we can define a bijective function $ f $ such that for $ f(2k) = g(2k) $ and $ f(2k+1) = n \in X $.
+This defintion of $ f $ creates a bijection for the $ k + 1 $ case and therefore by induction the statement holds for all $ n $. \\
+\end{q}
+\begin{q}
+Homework 1.69 \\
+Proof. Proceed by induction on $ n $.
+For the base case consider when $ n = 1$. 
+The statement holds since, 
+$$ 1^2 = \dfrac{1(2)(3)}{6} = 1 $$
+For the inductice step assume the statement holds for some $ k $.
+That is,
+$$ 1^2 + 2^2 + ... + k^2 = \dfrac{k(k+1)(2k+1)}{6} $$
+We will show the statement holds for $ k + 1 $. That is,
+$$ 1^2 + 2^2 + ... + (k+1)^2 = \dfrac{(k+1)(k+2)(2k+3)}{6} $$
+From our inductive hypothesis we can substitute in 
+$$  \dfrac{k(k+1)(2k+1)}{6} + (k+1)^2 = \dfrac{(k+1)(k+2)(2k+3)}{6} $$
+Which with some algebra is equivalent.
+
+\end{q}
+
+\end{document}
