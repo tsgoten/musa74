@@ -1,0 +1,96 @@
+\documentclass[11pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amssymb, amsthm, xcolor,  chngcntr}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\theoremstyle{definition} 
+\newtheorem{q}{}
+\renewcommand*{\theq}{\alph{q}}
+\counterwithin*{q}{section}
+\begin{document}
+	
+\makechaptertitle{MUSA 74 Homework 7}
+
+No feedback needed. Thank you for the great semester!
+The p-adic stuff was super hard :(
+
+\begin{q}
+   Homework 3.11 \\
+   Given that $ f $ and $ g $ are continuous for $ f + g $
+   \begin{align*}
+        |x - y| &\leq \delta, \\
+        |f(x) - f(y)| &\leq \epsilon/2 \\
+        |g(x) - g(y)| &\leq \epsilon/2 
+        \intertext{Then it follows directly that}
+        |f(x) + g(x) - f(y) - g(y)| &\leq |f(x) - f(y)| + |g(x) - g(y)| \\
+        & \leq \epsilon
+        \intertext{by the triangle inequality}
+   \end{align*}
+   To show $ fg $ is continuous \dots \\
+   For $ | f | $ consider that 
+   \begin{align*}
+        ||x| - |y|| \leq |x - y| \leq \delta \\
+        \intertext{Then the definiton follows with}
+        ||f(x)| - |f(y)|| \leq |f(x) - f(y)| \leq \epsilon  
+   \end{align*}
+\end{q}
+\begin{q}
+    Homework 3.12 \\
+    Let $ x_n $ be the decimal expansion for $ r $. 
+    We can form such a sequence for any real number $ r $.  
+    Additionally, each $ x_i $ is a raitonal number since we know that it is just an arbitrary real number over 10 to some power.
+\end{q}
+\begin{q}
+    For contradiction assume that $ f $ is not constant. 
+    Then there must exist $ x, y $ such that $ x > y $ and $ f(x) > f(y) $ and $ f(x) - f(y) = 1 $. 
+    We know this is true since $ f $ is a mapping to $ \mathbb{Z} $.
+    Therefore, $ f(x) > f(x) - 0.5 > f(y) $. But clearly $ f(x) - 0.5 $ is not in $ \mathbb{Z} $.
+    So, we have a contradiction since by the IVT there does not exist a $ x $ such that $ f(x) - 0.5 $ but that would make  $f $ not continuous.
+    So it must be constant. 
+
+\end{q}
+\begin{q}
+    Homework 3.26B \\
+    Consider $ f = \sqrt{x} $. Then, let $ y \in f([a, b]) $ for when $ y = \sqrt{\sqrt{2}}$. 
+    There is not $ x \in \mathbb{Q}$ such that $ f(x) = y $ .
+\end{q}
+\begin{q}
+    Homework 5.46 \\
+    We can show that $ d_p $ is ultrametric when considering that for rational numbers $ | x - y |_p $ results in 
+    $ x = p^n (a/b) $. So we can take the rational numbers as $ x = p/q $ and $ y = r/s $. therefore we have
+    $ | x - y |_p = |\dfrac{ps - rq}{qs} $. We must find the $ p $ that satisifies such conditions.
+    Intuitively, the maximum of three such numbers for when we consider the ultrametric will be depended on this numberator and denominator form.
+\end{q}
+\begin{q}
+    Homework 5.48 \\
+    Let $ x_n $ be a sequence such that 
+    $$ x_n = a_0 + a_1 p + .. +a_np^n $$ 
+    Then we can show that it holds $ |x_{n+k} - x_{n}|_p = a_{n+k}p^{n+k} + ... + a_n p^n $.  
+    Since it is p-adic we know that this must hold the definition for a Cauchy sequence since for all $ \epsilon $ we can find a follwoing $k$.
+\end{q}
+\begin{q}
+    Homework 5.49 \\
+    Cauchy equivalence is a equivalence relation based on the fact that. If a given sequence is Cauchy equivalent then it must be true that it is equivalent to itself.
+    Let $ x_n $ be a Cauchy sequence then its equivalence relation to $ y_n $ means that...  
+\end{q}
+\begin{q}
+    Homework 5.51 \\ 
+    We can treat addition as our previous understanding of addition but with $ p $ in mind. 
+    That is if each class can be written as $ a_0 + a_1p + ... $ then addition between that and $ b_0 + b_1p + ... $ would just result in 
+    $ (a_0 + b_0) + (a_1 + b_1)p + ... $. Similarily we can define multiplication to be this pointwise multiplication where the resulting product would be
+    $ (a_0 b_0 ) + (a_1 b_1) p + ... $. 
+\end{q}
+
+
+\end{document}
